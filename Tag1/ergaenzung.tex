@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{geometry}
+\geometry{margin=2.2cm}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries Von der Normalform zur Scheitelpunktsform}
+\end{center}
+
+\vspace{1em}
+
+Wir beginnen mit der Parabel in Normalform:
+\[
+f(x) = \textcolor{blue}{a}x^2 + \textcolor{red}{b}x + \textcolor{green}{c}.
+\]
+
+\section*{1. \textcolor{blue}{a} ausklammern}
+\[
+f(x) = \textcolor{blue}{a}\Bigl(x^2 + \frac{\textcolor{red}{b}}{\textcolor{blue}{a}} x \Bigr)
++ \textcolor{green}{c}.
+\]
+
+\section*{2. Quadratische Ergänzung}
+Berechne:
+\[
+\left(\frac{\textcolor{red}{b}}{2\textcolor{blue}{a}}\right)^2.
+\]
+
+Führe sie im Inneren ein und ziehe sie wieder ab:
+\[
+f(x)
+= \textcolor{blue}{a}\Bigl(
+x^2 + \frac{\textcolor{red}{b}}{\textcolor{blue}{a}}x
++ \left(\frac{\textcolor{red}{b}}{2\textcolor{blue}{a}}\right)^2
+- \left(\frac{\textcolor{red}{b}}{2\textcolor{blue}{a}}\right)^2
+\Bigr)
++ \textcolor{green}{c}.
+\]
+
+\section*{3. Zum Quadrat zusammenfassen}
+\[
+x^2 + \frac{\textcolor{red}{b}}{\textcolor{blue}{a}}x
++ \left(\frac{\textcolor{red}{b}}{2\textcolor{blue}{a}}\right)^2
+=
+\left(x + \frac{\textcolor{red}{b}}{2\textcolor{blue}{a}}\right)^2.
+\]
+
+Damit:
+\[
+f(x) =
+\textcolor{blue}{a}\left(x + \frac{\textcolor{red}{b}}{2\textcolor{blue}{a}}\right)^2
+- \textcolor{blue}{a}\left(\frac{\textcolor{red}{b}}{2\textcolor{blue}{a}}\right)^2
++ \textcolor{green}{c}.
+\]
+
+\section*{4. Vereinfachen}
+\[
+- \textcolor{blue}{a}\left(\frac{\textcolor{red}{b}}{2\textcolor{blue}{a}}\right)^2
+= -\frac{\textcolor{red}{b}^2}{4\textcolor{blue}{a}}.
+\]
+
+\section*{5. Scheitelpunktsform}
+\[
+\boxed{
+f(x)
+= \textcolor{blue}{a}
+\left(x + \frac{\textcolor{red}{b}}{2\textcolor{blue}{a}}\right)^2
++ \left(
+\textcolor{green}{c} -
+\frac{\textcolor{red}{b}^2}{4\textcolor{blue}{a}}
+\right)}
+\]
+
+\section*{Scheitelpunkt}
+\[
+S\left(
+-\frac{\textcolor{red}{b}}{2\textcolor{blue}{a}},\;
+\textcolor{green}{c} - \frac{\textcolor{red}{b}^2}{4\textcolor{blue}{a}}
+\right).
+\]
+
+\end{document}

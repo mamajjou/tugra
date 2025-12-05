@@ -1,0 +1,237 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage{braket}
+\usepackage{graphicx}
+\usepackage{physics}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\title{Geometry in Physics - Exercise Sheet 8}
+\author{Malik Amajjoud, Matrikelnummer: 7380412 \\ Christoph Bock, Matrikelnummer: 3089800}
+\maketitle
+
+
+\section*{Task 1: Properties of the Hodge star operator}
+
+Let $(M,g)$ be an oriented $n$‑dimensional Riemannian (or pseudo‑Riemannian) manifold and
+$\alpha\!\in\!\Omega^{p}(M)$.
+
+\subsection*{(a) Square of the Hodge star}
+
+Choose a positively oriented local orthonormal co‑frame $\{e^{1},\dots,e^{n}\}$
+with $g(e^{i},e^{j})=\varepsilon_{i}\delta_{ij}$, where $\varepsilon_{i}\!=\!\pm1$
+and $\operatorname{sgn}g:=\varepsilon_{1}\cdots\varepsilon_{n}$.
+For a basis $p$‑form $e^{I}=e^{i_{1}}\!\wedge\!\dots\!\wedge e^{i_{p}}$ the Hodge star reads
+\[
+*e^{I}\;=\;\varepsilon_{I}\,e^{J},\qquad
+\varepsilon_{I}:=\operatorname{sgn}(\sigma)\,\varepsilon_{j_{1}}\!\cdots\!\varepsilon_{j_{n-p}},
+\]
+where $J$ is the (ordered) complementary index set and
+$\sigma\!:\!(1,\dots,n)\mapsto(i_{1},\dots,i_{p},j_{1},\dots,j_{n-p})$.
+Applying $*$ once more,
+\[
+**e^{I}=(-1)^{p(n-p)}(\varepsilon_{1}\!\cdots\!\varepsilon_{n})\,e^{I}
+       =\operatorname{sgn}g\,(-1)^{p(n-p)}e^{I}.
+\]
+Here we used that applying $*$ twice on a $p$‑form introduces the sign $(-1)^{p(n-p)}$ from graded commutation together with the overall factor $\operatorname{sgn}g$ coming from the signature of the metric.
+Because $\{e^{I}\}$ is a basis, the equality extends linearly:
+\[
+**\alpha \;=\; \operatorname{sgn}g\,(-1)^{p(n-p)}\,\alpha .
+\]
+
+\subsection*{(b) Metric transpose and isometries}
+
+For a $(1,1)$ tensor $A$ with components $A^{i}{}_{j}$ define the \emph{metric transpose}
+by $g(A^{T}X,Y)=g(X,AY)$ for all vector fields $X,Y$.
+In coordinates,
+\[
+(A^{T})^{i}{}_{j}=g^{ik}g_{jl}A^{l}{}_{k}=A_{j}{}^{i}.
+\]
+
+Let $\phi:M\!\to\!M$ be a diffeomorphism with Jacobian
+$J^{i}{}_{j}:=\partial\phi^{i}/\partial x^{j}$.
+The pull‑back metric is
+\[
+(\phi^{*}g)_{ij}=g_{kl}\,J^{k}{}_{i}\,J^{l}{}_{j}.
+\]
+\emph{Isometry} means $g_{ij}=(\phi^{*}g)_{ij}$, i.e.
+\[
+g_{ij}=g_{kl}\,J^{k}{}_{i}\,J^{l}{}_{j}.
+\]
+On a flat manifold with global Cartesian frame ($g_{ij}=\delta_{ij}$) this reduces to
+\[
+\delta_{ij}=\delta_{kl}\,J^{k}{}_{i}\,J^{l}{}_{j}\quad\Longrightarrow\quad J^{T}J=I,
+\]
+so the Jacobian matrix is orthogonal, $J\in O(n)$.  Moreover, orientation preservation requires $\det J = +1$, hence an orientation‑preserving isometry has $J\in SO(n)$.
+
+\subsection*{(c) Commutation of $\phi^{*}$ with the Hodge star}
+
+For any $p$‑form $\alpha$ consider
+\[
+\phi^{*}(*\alpha)\quad\text{and}\quad *(\phi^{*}\alpha).
+\]
+Because $*$ depends only on the metric and orientation,
+the equality
+\[
+\phi^{*}(*\alpha)\;=\;*(\phi^{*}\alpha).
+\]
+holds for all $\alpha$ \emph{iff} $\phi$ is an \emph{orientation‑preserving isometry} (it must preserve both the metric and the volume form).
+Conversely, an isometry preserves $g$ and the volume form, hence commutes with $*$.
+
+\paragraph{Flat case.}
+With $g_{ij}=\delta_{ij}$ and constant volume form $\epsilon_{i_{1}\dots i_{n}}$,
+write $\alpha=\tfrac{1}{p!}\alpha_{I}\,dx^{I}$.
+Using $*$ in index notation and $J^{T}J=I$ from part~(b) we find
+\[
+\phi^{*}(*\alpha)=\frac{1}{(n-p)!}\,\alpha_{I}\,J^{I}{}_{K}\,
+                  \epsilon_{KJ}\,dx^{J}
+                =*(\phi^{*}\alpha),
+\]
+so commutation is equivalent to $J$ being orthogonal with $\det J = +1$, i.e.\ $J\in SO(n)$, completing the proof.
+
+\newpage
+\section*{Task 2: Hodge star in spherical coordinates}
+
+Consider $\mathbb{R}^{3}$ with spherical coordinates $(r,\theta,\phi)$ and metric
+\[
+g=\operatorname{diag}\!\bigl(1,\; r^{2},\; r^{2}\sin^{2}\theta\bigr).
+\]
+With orientation $dr\wedge d\theta\wedge d\phi>0$, the Hodge star acts on the coordinate basis forms as
+\[
+\begin{aligned}
+*1 &= r^{2}\sin\theta\,dr\wedge d\theta\wedge d\phi,\\[4pt]
+*dr &= r^{2}\sin\theta\,d\theta\wedge d\phi,\\[4pt]
+*d\theta &= \sin\theta\,d\phi\wedge dr,\\[4pt]
+*d\phi &= \frac{1}{\sin\theta}\,dr\wedge d\theta,\\[4pt]
+*(dr\wedge d\theta) &= \sin\theta\,d\phi,\\ [4pt]
+*(d\theta\wedge d\phi) &= \frac{1}{r^{2}\sin\theta}\,dr,\\[4pt]
+*(d\phi\wedge dr) &= \frac{1}{\sin\theta}\,d\theta,\\[4pt]
+*(dr\wedge d\theta\wedge d\phi) &= \frac{1}{r^{2}\sin\theta}.
+\end{aligned}
+\]
+
+\newpage
+\section*{Task 3: Coderviative and 2D electrodynamics}
+
+\subsection*{(a) Coordinate expression for the coderviative on one‑forms}
+
+On an $n$‑dimensional oriented (pseudo‑)Riemannian manifold $(M,g)$ the
+coderviative acting on a $p$‑form is defined by
+\[
+\delta:=\operatorname{sgn}g\,(-1)^{n(p+1)+1}\,*\,d\,*,
+\qquad\text{where } \operatorname{sgn}g=\operatorname{sign}\det g.
+\]
+For a \emph{one‑form} $\phi=\phi_{i}\,dx^{i}$ ($p=1$) we have
+\[
+\delta\phi = -\,|g|^{-\frac12}\,\partial_{i}\!\left(|g|^{\frac12} \phi^{i}\right),
+\]
+with $|g|:=|\det g_{ij}|$ and index raising via $g^{ij}$:
+$\phi^{i}=g^{ij}\phi_{j}$.
+
+\emph{Derivation.}  
+Write the Hodge star of $\phi$ in local coordinates,
+\[
+*\phi = \frac{1}{(n-1)!}\,\phi_{i}\,\sqrt{|g|}\,g^{ij}
+       \,\epsilon_{jj_{2}\dots j_{n}}\,dx^{j_{2}}\!\wedge\!\dots\!\wedge dx^{j_{n}},
+\]
+take the exterior derivative, apply $*$ once more, use
+$*^{2}=(-1)^{n+1}\operatorname{sgn}g$ and contract the Levi‑Civita symbols.  The
+result is the above divergence formula.
+
+\subsection*{(b) Hodge decomposition and field strength in 2D Euclidean space}
+
+Let $A=A_{i}\,dx^{i}$ be a one‑form on flat $\mathbb{R}^{2}$ with coordinates
+$(x^{1},x^{2})$ and Euclidean metric $\delta_{ij}$.  The Hodge decomposition reads
+\[
+A = d\varphi + \delta\chi,
+\]
+where $\varphi$ is a scalar (0‑form) and
+$\chi=\chi(x)\,dx^{1}\!\wedge dx^{2}$ is a $2$‑form ($\chi\equiv \chi_{12}$).
+
+\paragraph{Component form.}
+Because $*dx^{1}=dx^{2}$ and $*dx^{2}=-dx^{1}$ in $\mathbb{R}^{2}$,
+\[
+\delta\chi = *\,d\,*\chi
+           = *\,d\bigl(\chi(x)\bigr)
+           = *\bigl(\partial_{j}\chi\,dx^{j}\bigr)
+           = \epsilon_{ij}\,\partial_{j}\chi\,dx^{i},
+\]
+with $\epsilon_{12}=+1$.  Hence
+\[
+A_{i} = \partial_{i}\varphi \;+\; \epsilon_{ij}\,\partial_{j}\chi.
+\]
+
+\paragraph{Field strength.}
+The gauge‑invariant two‑form is
+\[
+F = dA 
+  = d\bigl(\partial_{i}\varphi\,dx^{i}\bigr)
+    + d\bigl(\epsilon_{ij}\partial_{j}\chi\,dx^{i}\bigr)
+  = 0 \;+\; \bigl(\partial_{k}\epsilon_{ij}\partial_{j}\chi\bigr)\,dx^{k}\!\wedge dx^{i}.
+\]
+Evaluating the antisymmetric combination gives
+\[
+F = (\partial_{1}A_{2} - \partial_{2}A_{1})\,dx^{1}\!\wedge dx^{2}
+  = -\,\Delta\chi\,dx^{1}\!\wedge dx^{2},
+\]
+where $\Delta=\partial_{1}^{2}+\partial_{2}^{2}$ is the Laplacian.  
+All terms containing $\varphi$ cancel, so $F$ depends solely on~$\chi$.
+In electrodynamics language the pure gauge potential $d\varphi$ carries no
+physical degrees of freedom, while $\chi$ encodes the observable field.
+
+\newpage
+\section*{Task 4: Electric potential in a sphere}
+
+Consider spherical coordinates $(r,\theta,\phi)$ with metric
+$g_{ij}=\operatorname{diag}(1,r^{2},r^{2}\sin^{2}\theta)$.
+
+\subsection*{(a) Hodge–Laplace operator on scalars}
+
+For a scalar $\varphi$ the Laplace–de\,Rham operator reduces to the ordinary
+Laplace--Beltrami operator:
+\[
+\Delta\varphi = -(\mathrm d+\delta)^{2}\varphi
+              = -\delta\,\mathrm d\varphi
+              = -\,|g|^{-\frac12}\,\partial_{i}\!\left(|g|^{\frac12}g^{ij}\partial_{j}\varphi\right).
+\]
+With $|g|=r^{4}\sin^{2}\theta$ and $g^{ij}=\operatorname{diag}(1,r^{-2},r^{-2}\sin^{-2}\theta)$
+this becomes
+\[
+\boxed{\;
+\Delta = \frac{1}{r^{2}}\partial_{r}\!\bigl(r^{2}\partial_{r}\bigr)
+        +\frac{1}{r^{2}\sin\theta}\partial_{\theta}\!\bigl(\sin\theta\,\partial_{\theta}\bigr)
+        +\frac{1}{r^{2}\sin^{2}\theta}\,\partial_{\phi}^{2}
+\;}.
+\]
+
+\subsection*{(b) Poisson equation with a point charge and fixed boundary potential}
+
+Insert a point charge $Q$ at the origin and fix the potential at the sphere
+$r=R$ to the constant $V_{0}$:
+\[
+\Delta\varphi = Q\,\delta^{(3)}(x),\qquad \varphi(R)=V_{0}.
+\]
+
+Because the source is spherically symmetric, the solution depends only on~$r$.
+For $r>0$ we have $\Delta\varphi=0$, so
+\[
+\varphi(r)=A+\frac{B}{r}.
+\]
+Integrating the flux of $\nabla\varphi$ through a small sphere $S_{\varepsilon}$ around the origin gives  
+\[
+\oint_{S_{\varepsilon}}\nabla\varphi\cdot d\mathbf S \;=\; 4\pi B \;=\; Q,
+\]
+so, with the sign convention $\Delta(1/r)=-4\pi\delta^{(3)}(x)$, we get $B=-Q/(4\pi)$.
+Gauss’ law (integrate $\Delta\varphi$ over a ball of radius $\varepsilon$ and use
+the divergence theorem) fixes $B=-Q/(4\pi)$, while the boundary condition gives
+$A=V_{0}+\dfrac{Q}{4\pi R}$.
+Hence
+\[
+\varphi(r)=V_{0}+\frac{Q}{4\pi R}-\frac{Q}{4\pi r}, \qquad 0<r<R.
+\]
+The additive constant ensures $\varphi(R)=V_{0}$.  The field is
+$E=-\nabla\varphi=(-Q/4\pi r^{2})\,\hat{\mathbf e}_{r}$, the usual Coulomb field,
+while the Dirichlet condition merely shifts the potential by a constant.
+\end{document}
