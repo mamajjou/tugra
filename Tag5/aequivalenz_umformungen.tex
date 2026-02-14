@@ -1,0 +1,209 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage[margin=1.7cm]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{enumitem}
+\setlength{\parindent}{0pt}
+\setlist{itemsep=0.35em, topsep=0.35em}
+
+\title{Äquivalenzumformungen: Schritt für Schritt}
+\author{}
+\date{14.02.2026}
+
+\begin{document}
+\maketitle
+
+\section*{Die Grundlagen — Addition und Subtraktion}
+
+\subsection*{Wichtige Grundregel}
+Du darfst auf beiden Seiten einer Gleichung das Gleiche addieren oder subtrahieren:
+\[
+  \text{Wenn } a = b, \text{ dann gilt auch } a + c = b + c \quad \text{und} \quad a - c = b - c.
+\]
+
+\subsection*{Aufgabe 1: Einfaches Isolieren}
+Löse nach der angegebenen Variablen auf. Zeige jeden Schritt.
+\begin{enumerate}
+  \item \(x + 7 = 15\) \hfill [nach \(x\) auflösen]
+  \item \(y - 3 = 12\) \hfill [nach \(y\) auflösen]
+  \item \(a + 4.5 = 9\) \hfill [nach \(a\) auflösen]
+  \item \(-3 + z = 8\) \hfill [nach \(z\) auflösen]
+\end{enumerate}
+
+\subsection*{Aufgabe 2: Terme verschieben}
+Bringe die gesuchte Variable auf eine Seite, den Rest auf die andere.
+\begin{enumerate}
+  \item \(2x = x + 5\)
+  \item \(3y + 2 = y + 10\)
+  \item \(a + 7 = 2a - 1\)
+  \item \(5z - 3 = z + 9\)
+\end{enumerate}
+
+\subsection*{Neuer Trick: Zusammenfassen}
+Gleichartige Terme (dieselbe Variable, gleiche Potenz) kannst du addieren oder subtrahieren:
+\[
+  2x + 3x = 5x, \qquad 7a - 4a = 3a.
+\]
+
+\subsection*{Aufgabe 3: Zusammenfassen + Isolieren}
+Löse die Gleichungen. Zeige das Zusammenfassen als eigenen Schritt.
+\begin{enumerate}
+  \item \(2x + 3x = 15\)
+  \item \(5y - 2y = 9\)
+  \item \(3a + a + 2 = 14\)
+  \item \(7z - 4z - 3 = 10\)
+\end{enumerate}
+
+\section*{Multiplikation und Division}
+
+\subsection*{Wichtige Grundregeln}
+Du darfst beide Seiten mit derselben Zahl multiplizieren (\textbf{außer 0!}) oder dividieren:
+\[
+  \text{Wenn } a = b \text{ und } c \neq 0, \text{ dann gilt auch } a \cdot c = b \cdot c \quad \text{und} \quad \frac{a}{c} = \frac{b}{c}.
+\]
+
+\subsection*{Aufgabe 4: Einfaches Multiplizieren/Dividieren}
+Löse nach der Variablen auf. Schreibe immer zuerst, womit du multiplizierst oder teilst.
+\begin{enumerate}
+  \item \(3x = 12\)
+  \item \(-5y = 20\)
+  \item \(\frac{a}{4} = 6\)
+  \item \(-\frac{z}{3} = -8\)
+\end{enumerate}
+
+\subsection*{Aufgabe 5: Erst verschieben, dann teilen}
+Kombiniere Addition/Subtraktion mit Multiplikation/Division.
+\begin{enumerate}
+  \item \(2x + 4 = 14\)
+  \item \(3y - 6 = 12\)
+  \item \(5a + 7 = 32\)
+  \item \(-4z + 3 = 15\)
+\end{enumerate}
+
+\subsection*{Neuer Trick: Ausklammern}
+Wenn ein Faktor in jedem Term vorkommt, kannst du ihn ausklammern:
+\[
+  2x + 4 = 2(x + 2), \qquad 3a - 6 = 3(a - 2).
+\]
+
+\subsection*{Aufgabe 6: Ausklammern und vereinfachen}
+Klammere den gemeinsamen Faktor aus und löse dann.
+\begin{enumerate}
+  \item \(2x + 6 = 10\)
+  \item \(3y - 9 = 12\)
+  \item \(4a + 8 = 20\)
+  \item \(5z - 10 = 25\)
+\end{enumerate}
+
+\subsection*{Aufgabe 7: Alles bis hierher kombinieren}
+Löse. Nutze alle Tricks, die du kennst.
+\begin{enumerate}
+  \item \(2x + 3x = 10 + 5\)
+  \item \(4y - 2 = 2y + 8\)
+  \item \(3a + 7 = a + 19\)
+  \item \(5z - 3 = 2z + 9\)
+\end{enumerate}
+
+\section*{Klammern, Brüche und Potenzen}
+
+\subsection*{Wichtige Grundregeln für Klammern}
+\begin{itemize}
+  \item \textbf{Ausmultiplizieren:} \(2(x + 3) = 2x + 6\)
+  \item \textbf{Binomische Formeln:} \((a + b)^2 = a^2 + 2ab + b^2\)
+\end{itemize}
+
+\subsection*{Aufgabe 8: Klammer auflösen}
+Löse die Gleichungen, indem du zuerst ausmultiplizierst.
+\begin{enumerate}
+  \item \(2(x + 3) = 14\)
+  \item \(3(2y - 1) = 15\)
+  \item \(-4(a + 2) = -12\)
+  \item \(5(3 - z) = 25\)
+\end{enumerate}
+
+\subsection*{Neuer Trick: Brüche beseitigen}
+Wenn eine Gleichung Brüche hat, multipliziere beide Seiten mit dem \textbf{Hauptnenner}. Damit werden alle Brüche weg:
+\[
+  \frac{x}{3} + \frac{x}{6} = 4 \quad \xrightarrow{\cdot 6} \quad 2x + x = 24.
+\]
+
+\subsection*{Aufgabe 9: Brüche eliminieren}
+Finde den Hauptnenner und multipliziere beide Seiten.
+\begin{enumerate}
+  \item \(\frac{x}{2} + \frac{x}{4} = 6\)
+  \item \(\frac{y}{3} + \frac{2y}{6} = 8\)
+  \item \(\frac{a}{5} - \frac{a}{10} = 3\)
+  \item \(\frac{2z}{3} - \frac{z}{6} = 5\)
+\end{enumerate}
+
+\subsection*{Neuer Trick: Potenzen und Wurzeln}
+Wenn eine Variable mit einer Potenz vorkommt, nutze die umgekehrte Operation:
+\[
+  x^2 = 9 \quad \xrightarrow{\sqrt{}} \quad x = \pm 3, \qquad \sqrt{x} = 4 \quad \xrightarrow{(\phantom{x})^2} \quad x = 16.
+\]
+
+\subsection*{Aufgabe 10: Mit Potenzen arbeiten}
+Löse. Denk an die \(\pm\) bei Quadratwurzeln.
+\begin{enumerate}
+  \item \(x^2 = 16\)
+  \item \(y^2 = 25\)
+  \item \(3x^2 = 27\)
+  \item \(4y^2 - 36 = 0\)
+\end{enumerate}
+
+\subsection*{Aufgabe 11: Mixed — Klammern, Brüche, Potenzen}
+Kombiniere die neuen Tricks mit den alten.
+\begin{enumerate}
+  \item \(2(x + 1) = 10\)
+  \item \(\frac{3a}{4} + a = 7\)
+  \item \((2y + 1)^2 = 25\)
+  \item \(\frac{x^2}{9} = 4\)
+\end{enumerate}
+
+\section*{Formeln umstellen und komplexe Aufgaben}
+
+\subsection*{Wichtiger Trick: Variablen tauschen}
+Oft willst du eine Formel nach einer bestimmten Variable umstellen. Das Prinzip ist immer gleich: Die gesuchte Variable isolieren.
+
+\subsection*{Aufgabe 12: Einfache Formeln}
+Stelle jede Formel nach der angegebenen Variablen um.
+\begin{enumerate}
+  \item \(A = a \cdot b\) \hfill [nach \(a\) auflösen]
+  \item \(v = \frac{s}{t}\) \hfill [nach \(s\) auflösen]
+  \item \(U = 2 \cdot (a + b)\) \hfill [nach \(a\) auflösen]
+  \item \(F = m \cdot a\) \hfill [nach \(m\) auflösen]
+\end{enumerate}
+
+\subsection*{Aufgabe 13: Schwierigere Formeln}
+\begin{enumerate}
+  \item \(E = \frac{1}{2} m v^2\) \hfill [nach \(v\) auflösen]
+  \item \(I = \frac{U}{R}\) \hfill [nach \(R\) auflösen]
+  \item \(A = \pi \cdot r^2\) \hfill [nach \(r\) auflösen]
+  \item \(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\) \hfill [nach \(\sqrt{b^2 - 4ac}\) auflösen]
+\end{enumerate}
+
+\subsection*{Neuer Trick: Substitution}
+Wenn ein komplizierter Ausdruck immer wieder vorkommt, setze ihn als neue Variable:
+\[
+  (x + 1)^2 + 2(x + 1) - 3 = 0 \quad \xrightarrow{z = x + 1} \quad z^2 + 2z - 3 = 0.
+\]
+
+\subsection*{Aufgabe 14: Substitution anwenden}
+\begin{enumerate}
+  \item \((2x + 1)^2 - (2x + 1) - 6 = 0\) \hfill [Tipp: \(z = 2x + 1\)]
+  \item \(3\sqrt{x} - \sqrt{x}^2 - 2 = 0\) \hfill [Tipp: \(z = \sqrt{x}\)]
+  \item \(\frac{4}{(x-1)^2} + \frac{2}{x-1} - 6 = 0\) \hfill [Tipp: \(z = \frac{1}{x-1}\)]
+\end{enumerate}
+
+\subsection*{Aufgabe 15: Abschluss — Alles kombinieren}
+Diese Aufgaben brauchen fast alles, was du gelernt hast. Nimm dir Zeit und zeige alle Schritte.
+\begin{enumerate}
+  \item \(\frac{2(x + 3)}{5} - \frac{x - 1}{3} = 1\)
+  \item \(3(x - 2)^2 - 27 = 0\)
+  \item \(\frac{x + 1}{2} + \frac{x}{4} = \frac{3x - 1}{6}\)
+  \item Stelle die quadratische Gleichung \(ax^2 + bx + c = 0\) nach \(x\) um (PQ-Formel herleiten).
+\end{enumerate}
+
+\end{document}
